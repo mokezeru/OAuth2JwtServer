@@ -1,6 +1,7 @@
 package com.charter.oAuth2JWTServer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
@@ -13,7 +14,6 @@ public class User {
     @Column
     private String username;
     @Column
-    @JsonIgnore
     private String password;
     @Column
     private long salary;
@@ -36,10 +36,12 @@ public class User {
         this.username = username;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
 
+    @JsonProperty
     public void setPassword(String password) {
         this.password = password;
     }
