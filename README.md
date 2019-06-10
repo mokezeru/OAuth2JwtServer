@@ -12,4 +12,4 @@ http://localhost:8080/oauth/token
 #To access the resource
 http://localhost:8080/users/user
 #Header
-	Authorization: the returned generated token
+	Authorization: the returned generated JWT token
